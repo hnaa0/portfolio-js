@@ -1,13 +1,6 @@
 * {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
 }
 
 body::-webkit-scrollbar {
@@ -60,12 +53,12 @@ header {
   margin-left: 8px;
   line-height: 44px;
   list-style: none;
+  color: #2c2c2c;
 }
 
 .nav-item:hover {
   cursor: pointer;
   font-weight: bold;
-  color: #2c2c2c;
 }
 
 .progress-bar {
@@ -106,18 +99,25 @@ header {
 }
 
 .about-me-icon-group {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
   margin-top: 16px;
 }
 
-.link-btn svg {
-  transition: 0.1s ease-in-out;
-}
-.link-btn svg:hover {
-  transform: scale(1.1);
+.project-link-btn-group {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
 }
 
-.link-btn:first-child {
-  margin-right: 12px;
+.link-btn {
+  transition: 0.1s ease-in-out;
+}
+
+.link-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .about-me-img {
@@ -163,22 +163,22 @@ header {
 
 .project-1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-    url("./img/reacshop-img.jpg");
+    url("../img/reacshop-img.jpg");
 }
 
 .project-2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-    url("./img/weatherwear-img.jpg");
+    url("../img/movieapp-img.jpg");
 }
 
 .project-3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-    url("./img/todolist-img.jpg");
+    url("../img/todolist-img.jpg");
 }
 
 .project-4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-    url("./img/portfolio-img.jpg");
+    url("../img/portfolio-img.jpg");
 }
 
 .project-title {
@@ -211,4 +211,65 @@ footer {
   text-align: center;
   font-size: 12px;
   padding: 20px 0;
+}
+
+.on-top-btn {
+  position: fixed;
+  bottom: 36px;
+  right: 36px;
+}
+
+.on-top-btn:hover svg {
+  fill: #8991ff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-container {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 420px;
+  padding: 24px;
+  color: #fff;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  background-color: #8991ff;
+  box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+}
+
+.modal-box .project-name {
+  margin-bottom: 24px;
+  font-size: 36px;
+}
+
+.modal-box .project-desc {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.modal-box .close-btn {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.modal-box .close-btn:hover {
+  transform: scale(1.1);
 }
